@@ -1,93 +1,47 @@
-.img {
-    width: 160px;
-    height:160px; 
-}
 
-
-
-/* Reset some default styles for better cross-browser consistency */
-body, h1, h2, h3, p, ul, ol, li {
-    margin: 0;
-    padding: 0;
-    color: #474538
-}
-
-/* Set a background color and font for the entire page */
-body {
-    background-color: #E9EDC9;
-    font-family: Arial, sans-serif;
-}
-
-/* Style the header */
-header {
-    background-color: #CCD5AE;
-    color: #474538;
-    padding: 20px;
-    text-align: center;
-}
-
-/* Style links */
-a {
-    color: #474538;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #a39951;
-    text-decoration: underline;
-}
-
-/* Style headings */
-h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
-}
-
-/* Style paragraphs */
-p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-}
-
-/* Style lists */
-ul, ol {
-    margin-left: 20px;
-    margin-bottom: 20px;
-}
-
-/* Style list items */
-li {
-    margin-bottom: 10px;
-}
-
-/* Style the main content container */
-.container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Style the footer */
-footer {
-    background-color: #FAEDCD;
-    color: #474538;
-    text-align: center;
-    padding: 10px;
-}
-
-/* Add responsive styles for smaller screens */
-@media (max-width: 768px) {
-    .container {
-        padding: 10px;
+    /* Add your dynamic CSS rules here */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
     }
-}
 
-/* Add more specific styles for different elements as needed */
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      color: #333;
+    }
+
+    p {
+      line-height: 1.5;
+    }
+
+    img.center {
+      display: block;
+      margin: 0 auto;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #333;
+      color: white;
+      padding: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Rest of your HTML content here -->
+</body>
+</html>
