@@ -7,7 +7,6 @@ body {
   font-size: 16px; /* Default font size for all screen sizes */
 }
 
-
 main {
   max-width: 800px;
   margin: 0 auto;
@@ -43,7 +42,7 @@ h1 {
 
 .animated-header {
   font-size: 24px;
-  color: #white;
+  color: white;
   position: relative; /* Add this line to enable transform animations */
   animation: bounce 2s infinite;
 }
@@ -88,6 +87,9 @@ img.center {
   display: block;
   margin: 0 auto;
 }
+.gallery{
+  text-align: center;
+}
 
 footer {
   text-align: center;
@@ -129,5 +131,12 @@ footer {
   &:hover {
     filter: grayscale(100%);
   }
+}
+
+/* Add this CSS code to your stylesheet */
+.gallery-background {
+  background: linear-gradient(to bottom, #8F8F8F, #000000); /* Adjust colors as needed */
+  /* Other styles for your gallery section */
+  /* ... */
 }
 

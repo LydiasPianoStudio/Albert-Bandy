@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client's Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #8F8F8F, #000000);
+            margin: 0;
+            padding: 0;
+        }
+
+        .gallery-background {
+            background: linear-gradient(to bottom, #8F8F8F, #000000);
+            padding: 20px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .gallery-item {
+            margin: 10px;
+            border: 1px solid #ccc;
+            overflow: hidden;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .slider {
+            overflow: hidden;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .slider-inner {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            flex: 0 0 100%;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Navigation buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            font-size: 18px;
+            border: none;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        .footer {
+            background: linear-gradient(to bottom, #8F8F8F, #000000);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+<div class="gallery-background">
+    <div class="slider">
+        <div class="slider-inner">
+            <div class="slide"><img src="./Pictures/raptor.jpg" alt="raptor"></div>
+            <div class="slide"><img src="./Pictures/dragon.jpeg" alt="horsepuzzle"></div>
+            <div class="slide"><img src="./Pictures/horsepuzzle.jpg" alt="horsepuzzle"></div>
+            <div class="slide"><img src="./Pictures/Santa.jpg" alt="santa"></div>
+            <div class="slide"><img src="./Pictures/dog.jpg" alt="dog"></div>
+            <div class="slide"><img src="./Pictures/cat.jpg" alt="cat"></div>
+            <div class="slide"><img src="./Pictures/Jesus.jpg" alt="jesus"></div>
+            <div class="slide"><img src="./Pictures/crab.jpg" alt="crab"></div>
+            <div class="slide"><img src="./Pictures/trex.jpg" alt="trex"></div>
+            <div class="slide"><img src="./Pictures/Snowman.jpg" alt="snowman"></div>
+            <div class="slide"><img src="./Pictures/Santa.jpg" alt="santa"></div>
+            <div class="slide"><img src="./Pictures/Horse.jpg" alt="horse"></div>
+            <div class="slide"><img src="./Pictures/Baby_yoda.jpeg" alt="babyyoda"></div>
+            <div class="slide"><img src="./Pictures/Hagrid.jpg" alt="hagrid"></div>
+        </div>
+    </div>
+</div>
+
+<div class="gallery-background">
+    <button class="prev" onclick="moveSlider(-1)">❮</button>
+    <button class="next" onclick="moveSlider(1)">❯</button>
+</div>
+
+<script>
+    // JavaScript for slider navigation
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function moveSlider(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+        let slides = document.getElementsByClassName("slide");
+
+        if (n > slides.length) {
+            slideIndex = 1;
+        }
+        if (n < 1) {
+            slideIndex = slides.length;
+        }
+
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+    }
+</script>
+
+<div class="footer">
+    &copy; 2023 Lydia's Piano Studio. All rights reserved.
+</div>
+</body>
+</html>
