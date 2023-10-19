@@ -1,19 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Client's Gallery</title>
+    <title>Photo Gallery</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+       
             background: linear-gradient(to bottom, #8F8F8F, #000000);
+            padding: 20px;
             margin: 0;
             padding: 0;
+            font-size: 16px;
+        }
+
+        #header {
+            text-align: center;
+            padding: 14px;
+            background: linear-gradient(to bottom, #8F8F8F, #000000);
+            color: white;
+        }
+
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 100%;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        .profile-picture img {
+            max-width: 100%;
+        }
+
+        .animated-header {
+            font-size: 24px;
+            color: #e2dbcc;
+            position: relative;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-15px);
+            }
+
+            60% {
+                transform: translateY(-10px);
+            }
         }
 
         .gallery-background {
-            background: linear-gradient(to bottom, #8F8F8F, #000000);
+            background-color: #e2dbcc;
             padding: 20px;
         }
 
@@ -81,72 +130,86 @@
         }
 
         .footer {
-            background: linear-gradient(to bottom, #8F8F8F, #000000);
-            color: white;
+            background: linear-gradient(to top, #8F8F8F, #000000);
+            color: #e2dbcc;
             text-align: center;
             padding: 20px;
         }
     </style>
-
 </head>
 
 <body>
-    
-<div class="gallery-background">
-    <div class="slider">
-        <div class="slider-inner">
-            <div class="slide"><img src="./Pictures/raptor.jpg" alt="raptor"></div>
-            <div class="slide"><img src="./Pictures/dragon.jpeg" alt="horsepuzzle"></div>
-            <div class="slide"><img src="./Pictures/horsepuzzle.jpg" alt="horsepuzzle"></div>
-            <div class="slide"><img src="./Pictures/Santa.jpg" alt="santa"></div>
-            <div class="slide"><img src="./Pictures/dog.jpg" alt="dog"></div>
-            <div class="slide"><img src="./Pictures/cat.jpg" alt="cat"></div>
-            <div class="slide"><img src="./Pictures/Jesus.jpg" alt="jesus"></div>
-            <div class="slide"><img src="./Pictures/crab.jpg" alt="crab"></div>
-            <div class="slide"><img src="./Pictures/trex.jpg" alt="trex"></div>
-            <div class="slide"><img src="./Pictures/Snowman.jpg" alt="snowman"></div>
-            <div class="slide"><img src="./Pictures/Santa.jpg" alt="santa"></div>
-            <div class="slide"><img src="./Pictures/Horse.jpg" alt="horse"></div>
-            <div class="slide"><img src="./Pictures/Baby_yoda.jpeg" alt="babyyoda"></div>
-            <div class="slide"><img src="./Pictures/Hagrid.jpg" alt="hagrid"></div>
+    <div id="header">
+        <div class="profile-picture">
+            <img src="./Pictures/AlBandy.jpg" alt="Albert Bandy">
         </div>
+        <hr style="width: auto">
+        <h1 class="animated-header">Photo Gallery</h1>
     </div>
-</div>
 
-<div class="gallery-background">
-    <button class="prev" onclick="moveSlider(-1)">❮</button>
-    <button class="next" onclick="moveSlider(1)">❯</button>
-</div>
+    <div class="gallery-background">
+        <div class="slider">
+            <button class="prev" onclick="moveSlider(-1)">❮</button>
+            <button class="next" onclick="moveSlider(1)">❯</button>
+            <div class="slider-inner">
+                <div class="slide"><img src="./Pictures/raptor.jpg" alt="raptor"></div>
+                <div class="slide"><img src="./Pictures/dragon.jpeg" alt="horsepuzzle"></div>
+                <div class="slide"><img src="./Pictures/horsepuzzle.jpg" alt="horsepuzzle"></div>
+                <div class="slide"><img src="./Pictures/Santa.jpg" alt="santa"></div>
+                <div class="slide"><img src="./Pictures/dog.jpg" alt="dog"></div>
+                <div class="slide"><img src="./Pictures/cat.jpg" alt="cat"></div>
+                <div class="slide"><img src="./Pictures/Jesus.jpg" alt="jesus"></div>
+                <div class="slide"><img src="./Pictures/crab.jpg" alt="crab"></div>
+                <div class="slide"><img src="./Pictures/trex.jpg" alt="trex"></div>
+                <div class="slide"><img src="./Pictures/Snowman.jpg" alt="snowman"></div>
+                <div class="slide"><img src="./Pictures/Santa.jpg" alt="santa"></div>
+                <div class="slide"><img src="./Pictures/Horse.jpg" alt="horse"></div>
+                <div class="slide"><img src="./Pictures/Baby_yoda.jpeg" alt="babyyoda"></div>
+                <div class="slide"><img src="./Pictures/Hagrid.jpg" alt="hagrid"></div>
+            </div>
 
-<script>
-    // JavaScript for slider navigation
-    let slideIndex = 1;
-    showSlides(slideIndex);
+        </div>
 
-    function moveSlider(n) {
-        showSlides(slideIndex += n);
-    }
+    </div>
 
-    function showSlides(n) {
-        let slides = document.getElementsByClassName("slide");
 
-        if (n > slides.length) {
-            slideIndex = 1;
+
+    <script>
+        // JavaScript for slider navigation
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function moveSlider(n) {
+            showSlides(slideIndex += n);
         }
-        if (n < 1) {
-            slideIndex = slides.length;
+
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("slide");
+
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slides[slideIndex - 1].style.display = "block";
         }
-
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-
-        slides[slideIndex - 1].style.display = "block";
-    }
-</script>
-
-<div class="footer">
-    &copy; 2023 Lydia's Piano Studio. All rights reserved.
-</div>
+    </script>
+    <footer>
+        <div class="footer">
+            <hr style="width: auto">
+            <h3>Contact Us</h3>
+            <p>Contact us at: <a href="mailto:AABandy78@gmail.com">AABandy78@gmail.com</a></p>
+            <p>Etsy Shop: <a href="https://www.etsy.com/shop/ALsWoodcraftcreation?ref=profile_header"
+                    target="_blank">Etsy</a></p>
+            <p>Copyright © 2023 <a href="https://www.LydiasPianoStudio.com" target="_blank">Lydia's Piano Studio</a></p>
+        </div>
+    </footer>
 </body>
+
 </html>

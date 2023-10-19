@@ -1,31 +1,28 @@
-/* Default styles for all screen sizes */
+
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
   margin: 0;
   padding: 0;
-  font-size: 16px; /* Default font size for all screen sizes */
+  font-size: 24px;
+  background-color:#F5F5F5; 
+  background-size: 20px 20px;
 }
-
 main {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
 }
 
- h2 {
-  color: #333;
+ h1, h2, h3, #animated-header {
+  color: #e2dbcc;
 }
 
-h1 {
-  color:#f0f0f0
-}
 
 #header {
   text-align: center;
   padding: 14px;
-  background-color: #333;
-  color: white;
+  background: linear-gradient(to bottom, #8F8F8F, #000000);
+  color: #e2dbcc;
 }
 
 .profile-picture {
@@ -42,7 +39,7 @@ h1 {
 
 .animated-header {
   font-size: 24px;
-  color: white;
+  color: #e2dbcc;
   position: relative; /* Add this line to enable transform animations */
   animation: bounce 2s infinite;
 }
@@ -63,8 +60,8 @@ h1 {
 
 #AboutMe {
   line-height: 1.5;
-  text-shadow: 4px 4px 7px rgba(162,63,63,0.6);
-  color: #333;
+  text-shadow: 4px 4px 7px rgba(183, 121, 121, 0.907);
+  color: #310303;
 }
 
 #header {
@@ -93,7 +90,7 @@ img.center {
 
 footer {
   text-align: center;
-  background-color: #333;
+  background: linear-gradient(to top, #8F8F8F, #000000);
   color: white;
   padding: 10px 0;
 }
@@ -133,10 +130,4 @@ footer {
   }
 }
 
-/* Add this CSS code to your stylesheet */
-.gallery-background {
-  background: linear-gradient(to bottom, #8F8F8F, #000000); /* Adjust colors as needed */
-  /* Other styles for your gallery section */
-  /* ... */
-}
 
