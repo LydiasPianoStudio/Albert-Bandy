@@ -13,9 +13,10 @@ main {
   padding: 20px;
 }
 
- h1, h3, #animated-header {
+ h1, h3, .animated-header {
   color: #e2dbcc;
   font-size: 36px;
+  font-family: 'Neue Montreal';
 }
 
 
@@ -39,11 +40,7 @@ main {
   max-width: 100%;
 }
 
-.animated-header {
-  font-size: 24px;
-  color: #e2dbcc;
-  font-family: 'Neue Montreal';
-}
+
 
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
