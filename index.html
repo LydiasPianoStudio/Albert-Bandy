@@ -3,116 +3,248 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Albert Bandy - Intarsia Woodworker</title>
-  <link rel="stylesheet" href="AlbertBandy.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Albert Bandy</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Inline CSS for custom styling -->
+  <style>
+    body {
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #6c757d;
+      color: white;
+      padding: 20px 0;
+    }
+
+    .animated-header {
+      animation: fadeInDown 1s ease-out forwards;
+    }
+
+    .larger-text {
+        font-size: 1.5em; /* Adjust as needed */
+        font-weight: bold; /* Optional: makes the text bold for emphasis */
+        color: white; /* Optional: adjust text color */
+    }
+
+    @keyframes fadeInDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .profile-picture img {
+      width: 200px;
+      height: auto;
+      border-radius: 50%;
+    }
+
+    .btn-custom:hover {
+      background-color: #0056b3;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+
+    footer {
+      background-color: #6c757d;
+      color: white;
+      padding: 10px 0;
+    }
+
+    h2 {
+      margin-top: 30px;
+      color: #007bff;
+    }
+
+    hr {
+      border-top: 1px solid #bbb;
+    }
+
+    .video-container {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .custom-video {
+      width: 100%;
+      /* Full width within its container */
+      max-width: 800px;
+      /* Maximum width for larger screens */
+      height: auto;
+      /* Maintain aspect ratio */
+      display: block;
+      margin: 0 auto;
+      /* Center the video */
+    }
+
+    .btn-custom {
+      background-color: #007bff;
+      color: white;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 
 <body>
-  <header>
-    <div id="header">
+  <!-- Header with Bootstrap classes -->
+  <header id="header" class="text-center py-4">
+    <div class="container">
+      <!-- Header content goes here -->
       <div class="profile-picture">
-        <img src="./Pictures/AlBandy.jpg" alt="Albert Bandy">
+        <img src="./Pictures/AlBandy.jpg" alt="profile" class="img-fluid mx-auto d-block">
       </div>
-      <hr style="width: auto">
-      <h1 class="animated-header" style="font-size: 36px;">Al's Woodcraft Creation</h1>
-    </div>
+      <h1 class="mt-3 animated-header">AL's Woodcraft Creation</h1>
+      <!-- Etsy Shop Button -->
+      <a href="https://www.etsy.com/shop/ALsWoodcraftcreation?ref=profile_header" target="_blank"
+        class="btn btn-lg btn-custom mt-3">
+        Visit My Etsy Shop
+      </a>
+<p class="larger-text">Inquire about custom projects:</p>
+<li class="larger-text">
+    <i class="fas fa-envelope"></i> Contact: <a href="mailto:AABandy78@gmail.com">AABandy78@gmail.com</a>
+</li>
 
+      <hr class="my-4">
+    </div>
+    <!-- Promo Video -->
+    <div class="container">
+      <div class="video-container">
+        <video class="custom-video" controls>
+          <source src="./Pictures/AlbertBandyPromo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
   </header>
 
-  <main>
-    <div class="photo-container">
 
+  <!-- Main content area using Bootstrap's grid system -->
+  <main class="container my-5">
+    <div>
+      <h2 class="text-center"><i>My name is </i>Albert Bandy</h2>
+      <p class="lead">
+        <b>Intarsia Woodworker:</b> Woodworking has always been interesting to me, and after retirement from the
+        workforce, I
+        decided to make this a hobby. I invested in a scroll saw which makes intricate and detailed cuts and watched
+        YouTube videos to get creative ideas and instruction on how to use my new saw. My first projects, when
+        completed, were 2-dimensional and looked similar to a wall plaque or a puzzle made from 1/4 inch thick wood
+        stock. I continued researching different types of woodcraft and then I discovered Intarsia.
+      </p>
+      <p class="mb-4">
+        What is intarsia? A mosaic of contrasting and complementary woods cut, sanded, and glued into or onto a wooden
+        support resulting in a 3-dimensional work of art. It was popular in 15th century Italy.
+      </p>
+      <p class="mb-4">
+        Intarsia utilizes various species of wood of different grains, colors, and thicknesses resulting in a
+        3-dimensional work of art when completed. The process begins when a pattern of the project is cut into smaller
+        shapes and attached to the wood and used as a guide when cutting. After all the pieces are cut, they are sanded
+        and shaped to fit the pattern and then glued to a wood backing. As a rule, stains are never used because of the
+        variety of colors available in natural wood, but there are exceptions. My first project was a "T" Rex dinosaur
+        using a pattern purchased from Judy Gale Roberts Studios, and I've been working on others and designing some on
+        my
+        own.
+      </p>
 
-      <img src="./Pictures/woodwork.jpg" width="160px" height="160px" alt="woodwork" class="center">
-      <img src="./Pictures/Al.jpg" width="160px" height="160px" alt="Al" class="center">
-      <img src="./Pictures/AlbertBandy.jpg" width="160px" height="160px" alt="trex" class="center">
+      <h2 class="text-center">Gallery</h2>
 
-
+      <!-- Image gallery using Bootstrap grid classes -->
+      <div class="gallery row text-center">
+        <div class="col-sm-4 mb-4">
+          <img src="./Pictures/raptor.jpg" class="img-thumbnail" alt="raptor">
+        </div>
+        <div class="col-sm-4 mb-4">
+          <img src="./Pictures/dragon.jpeg" class="img-thumbnail" alt="dragon">
+        </div>
+        <div class="col-sm-4 mb-4">
+          <img src="./Pictures/horsepuzzle.jpg" class="img-thumbnail" alt="horse puzzle">
+        </div>
+        <div class="col-sm-4 mb-4">
+          <img src="./Pictures/Santa.jpg" class="img-thumbnail" alt="santa">
+        </div>
+        <div class="col-sm-4 mb-4">
+          <img src="./Pictures/dog.jpg" class="img-thumbnail" alt="dog">
+        </div>
+        <div class="col-sm-4 mb-4">
+          <img src="./Pictures/cat.jpg" class="img-thumbnail" alt="cat">
+        </div>
+        <div class="col-sm-4 mb-4">
+          <img src="./Pictures/Jesus.jpg" class="img-thumbnail" alt="jesus">
+        </div>
+        <div class="col-sm-4 mb-4">
+          <img src="./Pictures/Crab.jpg" class="img-thumbnail" alt="crab">
+        </div>
+        <div class="col-sm-4 mb-4">
+          <img src="./Pictures/trex.jpg" class="img-thumbnail" alt="t-rex">
+        </div>
+        <div class="col-sm-4 mb-4">
+          <img src="./Pictures/Snowman.jpg" class="img-thumbnail" alt="snowman">
+        </div>
+        <div class="col-sm-4 mb-4">
+          <img src="./Pictures/Horse.jpg" class="img-thumbnail" alt="horse">
+        </div>
+        <div class="col-sm-4 mb-4">
+          <img src="./Pictures/Baby_yoda.jpeg" class="img-thumbnail" alt="baby yoda">
+        </div>
+        <div class="col-sm-4 mb-4">
+          <img src="./Pictures/Hagrid.jpg" class="img-thumbnail" alt="hagrid">
+        </div>
+      </div>
     </div>
-
-    <div id="AboutMe">
-      <p align="center" style="color: #310303;; font-weight: bold; font-size: 36px; ">Meet Albert Bandy</p>
-      <p>
-        My name is Albert Bandy, and I'd like to share my journey into the world of woodworking and my passion for a
-        unique form of art called Intarsia. Woodworking has always captivated my interest, and after retiring from the
-        workforce, I decided to turn it into a fulfilling hobby. It all began with a simple investment in a scroll saw,
-        a
-        versatile tool that allows me to create intricate and detailed cuts with precision. To enhance my skills and
-        gather creative inspiration, I delved into the world of online resources, particularly YouTube videos, which
-        provided me with valuable ideas and step-by-step instructions on harnessing the potential of my new saw.
-      </p>
-
-      <p>
-        My initial projects, once completed, resembled 2-dimensional artworks, often resembling wall plaques or
-        intricate
-        wooden puzzles crafted from 1/4 inch thick wood stock. However, my curiosity and dedication led me to explore
-        various facets of woodcraft, ultimately leading me to the captivating world of Intarsia.
-      </p>
-      <img src="./Pictures/Crab.jpg" width="160px" height="160px" align="middle" alt="crab" class="center">
-      <h2 align="center" style="font-size: 36px;">What is Intarsia?</h2>
-      <p>
-        In essence, it is a form of woodworking art that involves creating a mosaic of contrasting and complementary
-        woods, skillfully cut, sanded, and meticulously glued onto a wooden support. The result is a mesmerizing
-        3-dimensional masterpiece. This unique craft was immensely popular during the 15th century in Italy, and it has
-        retained its allure through the centuries.
-      </p>
-
-      <p>
-        The magic of Intarsia lies in the use of diverse species of wood, each with its distinct grains, colors, and
-        thicknesses. When combined, these elements transform into a mesmerizing 3-dimensional work of art. The creative
-        process typically commences with the careful cutting of a pattern into smaller, manageable shapes. These pieces
-        are then skillfully attached to the wood and serve as a guide for precision cutting. Once all the pieces are
-        expertly cut, they undergo meticulous sanding and shaping to seamlessly fit the pattern. Finally, they are
-        delicately glued onto a wooden backing.
-      </p>
-
-      <p>
-        What distinguishes Intarsia from other woodworking techniques is the exclusive use of natural wood colors. In
-        most
-        cases, stains are avoided because of the vast array of colors that can be harnessed from the natural wood
-        itself.
-        However, there are exceptions to this rule, allowing for unique and personalized touches to be added to certain
-        projects.
-      </p>
-      <img src="./Pictures/trex.jpg" width="160px" height="160px" align="middle" alt="trex" class="center">
-      <p>
-        One of my most cherished Intarsia projects was a "T" Rex dinosaur, for which I used a pattern purchased from
-        Judy
-        Gale Roberts Studios. Since then, I've been consistently working on new creations while also exploring my own
-        designs. It's a labor of love that not only allows me to express my creativity but also connects me with the
-        rich
-        history and tradition of Intarsia woodworking.
-      </p>
-
-      <p>
-        Thank you for joining me on this woodworking journey, and I look forward to sharing more of my Intarsia
-        creations
-        with you in the future.
-      </p>
-
     </div>
-    <div class="gallery">
-      <hr style="width: auto">
-      <a href="gallery.html" class="photo" style="font-size: 28px ;"> View Photo Gallery </a>
-      <img src="./Pictures/dragon.jpeg" width="160px" height="160px" align="middle" alt="dragon" class="center">
-    </div>
-<!--video
-    <iframe width="640" height="360" src="https://www.facebook.com/reel/2546380705528466" frameborder="0" allowfullscreen></iframe>
--->
-
   </main>
 
-  <footer>
-    <hr style="width: auto">
-    <h3>Contact Us</h3>
-    <p>Contact us at: <a href="mailto:AABandy78@gmail.com">AABandy78@gmail.com</a></p>
-    <p>Etsy Shop: <a href="https://www.etsy.com/shop/ALsWoodcraftcreation?ref=profile_header" target="_blank">Etsy</a>
-    </p>
-    <p>Copyright © 2023 <a href="https://www.LydiasPianoStudio.com" target="_blank">Lydia's Piano Studio</a></p>
-  </footer>
+  <!-- Footer with contact links -->
+  <footer class="text-center py-4">
+    <div class="container">
+      <hr class="my-4">
+      <h3>Built by <a href="https://LydiasPianoStudio.com" target="_blank" class="text-white">LydiasPianoStudio</a></h3>
+      <footer>
+        <ul class="list-unstyled">
+          <li>
+            <p>Copyright © 2023-2024</p>
+          </li>
+          <li>
+            <p>Connect with us for web development projects:</p>
+          <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/lydia-bandy-2b160745/"
+              target="_blank">LinkedIn</a></li>
+        </ul>
+      </footer>
 
-  <script src="./script.js"></script>
+
+
+      <!-- Bootstrap JS, Popper.js, and jQuery -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>
